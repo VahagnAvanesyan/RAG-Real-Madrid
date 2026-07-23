@@ -1,0 +1,11 @@
+Flask
+gunicorn
+python-dotenv
+langchain-chroma
+langchain-google-genai
+langchain-huggingface
+sentence-transformers
+streamlit
+langchain
+langchain-core
+chromadb

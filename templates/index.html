@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Real Madrid AI</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='style.css') }}"
+    >
+</head>
+
+<body>
+
+    <div class="background background-night"></div>
+    <div class="background background-day"></div>
+    <div class="background-overlay"></div>
+
+    <aside class="sidebar">
+
+        <div class="logo-wrapper">
+            <img
+                src="{{ url_for('static', filename='images/logo.jpg') }}"
+                alt="Real Madrid AI logo"
+                class="logo"
+>
+        </div>
+
+        <h2>Real Madrid AI</h2>
+
+        <p class="sidebar-description">
+            Explore Real Madrid history, legendary players,
+            trophies, presidents and unforgettable matches.
+        </p>
+
+        <div class="divider"></div>
+
+        <h3>Suggested questions</h3>
+
+        <button
+            class="suggestion-button"
+            data-question="When was Real Madrid founded?"
+        >
+            When was Real Madrid founded?
+        </button>
+
+        <button
+            class="suggestion-button"
+            data-question="Who is Real Madrid's all-time top scorer?"
+        >
+            All-time top scorer
+        </button>
+
+        <button
+            class="suggestion-button"
+            data-question="What was the Galácticos era?"
+        >
+            The Galácticos era
+        </button>
+
+        <button
+            class="suggestion-button"
+            data-question="Who was Santiago Bernabéu?"
+        >
+            Santiago Bernabéu
+        </button>
+
+        <button
+            class="suggestion-button"
+            data-question="What is La Fábrica?"
+        >
+            La Fábrica
+        </button>
+
+        <button id="clear-chat" class="clear-button">
+            Clear conversation
+        </button>
+
+        <p class="sidebar-footer">
+            Powered by Gemini, LangChain and ChromaDB
+        </p>
+
+    </aside>
+
+    <main class="main-content">
+
+        <section class="hero">
+
+            <div class="hero-badge">
+                RAG + Gemini
+            </div>
+
+            <h1>Real Madrid AI</h1>
+
+            <p>
+                The intelligent assistant for Madridistas
+            </p>
+
+        </section>
+
+        <section class="welcome-card">
+            <h2>Welcome, Madridista 🤍</h2>
+
+            <p>
+                Ask anything about the history, players,
+                trophies and unforgettable eras of Real Madrid.
+            </p>
+        </section>
+
+        <section id="chat" class="chat-container">
+
+            <div class="message assistant-message">
+                <div class="avatar">RM</div>
+
+                <div class="message-content">
+                    <strong>Real Madrid AI</strong>
+
+                    <p>
+                        Hola Madridista! Ask me anything about
+                        Real Madrid Club de Fútbol.
+                    </p>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="input-container">
+
+            <textarea
+                id="question-input"
+                placeholder="Ask anything about Real Madrid..."
+                rows="1"
+            ></textarea>
+
+            <button id="send-button">
+                Send
+            </button>
+
+        </section>
+
+    </main>
+
+    <script
+        src="{{ url_for('static', filename='script.js') }}"
+    ></script>
+
+</body>
+</html>
